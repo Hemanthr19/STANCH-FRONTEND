@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import CarDetails from "./pages/CarDetails";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"; // Import the Footer
+import Footer from "./components/Footer";
 import Payment from "./pages/Payment";
 import LoginPage from "./pages/LoginPage";
+import SearchResults from "./pages/SearchResults"; // Import SearchResults
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -17,9 +19,11 @@ function App() {
             <Route path="/car/:id" element={<CarDetails />} />
             <Route path="/payment/:id" element={<Payment />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/search" element={<SearchResults />} />
+            <Route path="/about" element={<AboutPage/>}/>
           </Routes>
         </main>
-        <Footer /> {/* Add Footer here */}
+        <Footer />
       </div>
     </Router>
   );

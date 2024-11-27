@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { FaCar } from "react-icons/fa";
+import { FaCar, FaBell } from "react-icons/fa"; 
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../css/navbar.module.css";
 import React, { useState } from "react";
@@ -21,24 +21,28 @@ const Navbar = () => {
   };
 
   const handleLoginClick = () => {
-    setIsSidebarOpen(false); // Close the sidebar
-    navigate("/login"); // Navigate to the login page
+    setIsSidebarOpen(false); 
+    navigate("/login"); 
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?query=${searchQuery}`); // Navigate to the search page with the query
+      navigate(`/search?query=${searchQuery}`); 
     }
+  };
+
+  const handleLogoClick = () => {
+    navigate("/");
   };
 
   return (
     <nav
       onClick={handleSidebarClose}
-      className="bg-primary text-white p-4 flex items-center justify-between shadow-md"
+      className="bg-primary text-white p-4 flex items-center justify-between shadow-md relative"
     >
-      {/* Logo and Menu */}
-      <div className="flex items-center space-x-2">
+     
+      <div className="flex items-center space-x-2 cursor-pointer" onClick={handleLogoClick}>
         <div onClick={handleSidebar} className={styles.menuIcon}>
           <MenuIcon />
         </div>
@@ -46,7 +50,7 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold">Car Rental</h1>
       </div>
 
-      {/* Search Bar */}
+     
       <form
         onSubmit={handleSearch}
         className="flex-grow mx-8 flex justify-center items-center"
@@ -66,7 +70,9 @@ const Navbar = () => {
         </button>
       </form>
 
-      {/* Navigation Links */}
+      
+
+     
       <div className="space-x-6">
         <Link to="/" className="hover:underline">
           Home
@@ -76,7 +82,9 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Sidebar */}
+      
+
+      
       <div
         className={`${styles.sidebardefault} ${
           !isSidebarOpen ? styles.sidebar : styles.sidebarappear

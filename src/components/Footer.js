@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-6 mt-4">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
-          {/* About Us */}
+        
           <div className="w-full sm:w-1/3 mb-4">
             <h2 className="text-xl font-semibold mb-2">About Us</h2>
             <p className="text-sm">
@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Contact Us */}
+        
           <div className="w-full sm:w-1/3 mb-4">
             <h2 className="text-xl font-semibold mb-2">Contact Us</h2>
             <ul>
@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Copyright */}
+        
           <div className="w-full sm:w-1/3 mb-4 text-center">
             <h2 className="text-xl font-semibold mb-2">Copyright</h2>
             <p className="text-sm">

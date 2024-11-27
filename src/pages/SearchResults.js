@@ -7,7 +7,7 @@ const SearchResults = () => {
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("query");
 
-  // Filter cars based on the search query
+  
   const filteredCars = mockData.filter((car) =>
     car.name.toLowerCase().includes(query?.toLowerCase())
   );

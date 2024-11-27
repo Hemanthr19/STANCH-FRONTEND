@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Payment from "./pages/Payment";
 import LoginPage from "./pages/LoginPage";
-import SearchResults from "./pages/SearchResults"; // Import SearchResults
+import SearchResults from "./pages/SearchResults"; 
 import AboutPage from "./pages/AboutPage";
 
 function App() {

@@ -4,20 +4,20 @@ import mockData from "../data";
 
 const CheckoutPage = () => {
 
-  // State for selected time slot and card details
+  
   const [timeSlot, setTimeSlot] = useState("");
   const [cardDetails, setCardDetails] = useState({ cardNumber: "", expiryDate: "", cvv: "" });
 
-  // State to calculate the total bill
+  
   const [totalPrice, setTotalPrice] = useState(0);
-  const [rentalHours, setRentalHours] = useState(1); // Default 1 hour
+  const [rentalHours, setRentalHours] = useState(1); 
 
-  // Handle time slot selection
+
   const handleTimeSlotChange = (event) => {
     setTimeSlot(event.target.value);
   };
 
-  // Handle card details input
+
   const handleCardChange = (event) => {
     const { name, value } = event.target;
     setCardDetails((prev) => ({
@@ -26,7 +26,7 @@ const CheckoutPage = () => {
     }));
   };
 
-  // Calculate total price
+
   const handleRentalHoursChange = (event) => {
     const hours = event.target.value;
     setRentalHours(hours);
@@ -43,7 +43,7 @@ const CheckoutPage = () => {
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md">
       <h1 className="text-3xl font-bold mb-6 text-center">Checkout</h1>
 
-      {/* Car Details */}
+
       <div className="flex items-center space-x-6 mb-6">
         <img src={car.image} alt={car.name} className="w-40 h-40 object-cover rounded-md" />
         <div>
@@ -53,7 +53,7 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      {/* Time Slot Selection */}
+ 
       <div className="mb-6">
         <h3 className="text-xl font-semibold">Select Rental Time Slot</h3>
         <select
@@ -68,7 +68,7 @@ const CheckoutPage = () => {
         </select>
       </div>
 
-      {/* Rental Hours and Total Price */}
+      
       <div className="mb-6">
         <h3 className="text-xl font-semibold">Rental Duration (hours)</h3>
         <input
@@ -81,7 +81,7 @@ const CheckoutPage = () => {
         <p className="mt-2 text-lg font-semibold">Total: ₹{totalPrice}</p>
       </div>
 
-      {/* Card Details */}
+      
       <div className="mb-6">
         <h3 className="text-xl font-semibold">Payment Information</h3>
         <div className="space-y-4">
@@ -127,7 +127,7 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      {/* Bill Details */}
+      
       <div className="border-t border-gray-200 pt-4">
         <h3 className="text-xl font-semibold">Bill Details</h3>
         <div className="flex justify-between py-2">
@@ -144,7 +144,7 @@ const CheckoutPage = () => {
         </div>
       </div>
 
-      {/* Checkout Button */}
+      
       <div className="mt-6">
         <button className="w-full py-3 bg-green-500 text-white text-lg font-bold rounded-md">
           Confirm Booking
